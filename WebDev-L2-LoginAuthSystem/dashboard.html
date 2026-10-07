@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <!-- Hidden until auth.js confirms there is a valid session -->
+  <main class="card" id="dashboard" hidden>
+    <h1>Hello, <span id="user-name"></span></h1>
+    <p class="lead">This page is only visible to logged-in users.</p>
+
+    <ul class="facts">
+      <li><strong>Logged in as</strong> <span id="user-id"></span></li>
+      <li><strong>Session started</strong> <span id="login-time"></span></li>
+      <li><strong>Account created</strong> <span id="created-time"></span></li>
+    </ul>
+
+    <button type="button" class="btn secondary" id="logout-btn">Logout</button>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+  <main class="card">
+    <h1>Create an account</h1>
+    <p class="lead">Register with a username or email.</p>
+
+    <p id="form-message" class="message error" role="alert" hidden></p>
+
+    <form id="register-form" novalidate>
+      <div class="field">
+        <label for="identifier">Username or email</label>
+        <input type="text" id="identifier" autocomplete="username" maxlength="60">
+        <p id="identifier-error" class="field-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="new-password" maxlength="100">
+        <p class="hint">At least 8 characters and 1 number.</p>
+        <p id="password-error" class="field-error" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" autocomplete="new-password" maxlength="100">
+        <p id="confirm-error" class="field-error" hidden></p>
+      </div>
+
+      <button type="submit" class="btn" id="submit-btn">Register</button>
+    </form>
+
+    <p class="switch">Already registered? <a href="login.html">Log in</a></p>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
